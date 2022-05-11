@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Create a new safety issue</description>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "ff5f945d41e64258bc77f7cef5be1381": {
+          "id": "ff5f945d41e64258bc77f7cef5be1381",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thank you for reporting a safety  ssue, "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.user.name}}",
+                      "displayValue": "Input Variables➛User➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": " "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "7a4583e488c247258fdf7299f90432d4": {
+          "id": "7a4583e488c247258fdf7299f90432d4",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Than you for submitting your safety issue, "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.user.name}}",
+                      "displayValue": "Input Variables➛User➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": " "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "bce8ac8c0bfc43b6aada498f693c401a": {
+          "id": "bce8ac8c0bfc43b6aada498f693c401a",
+          "stepType": "Prompt",
+          "name": "Short description",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please provide a short description of the issue"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "4eaf52d3f8734d09ade55a84ec3c0aeb",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "fb57636b43bd4f7ab5a1628a7f7d9e6e": {
+          "stepType": "ChoicePrompt",
+          "name": "Category",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What is the size of this issue?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "c204175c288446e3b720c7bebf2baaa7",
+          "id": "fb57636b43bd4f7ab5a1628a7f7d9e6e",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "e349b123eccc44c481bf4b28623302e1": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "Location",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Where did you saw this issue?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "27b388aedef94d6088f3be14dd20b740",
+          "id": "e349b123eccc44c481bf4b28623302e1",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Sorry, no records found."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "nameISNOTEMPTY"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "c1214f7999d8414284c31af1ad3beef8": {
+          "id": "c1214f7999d8414284c31af1ad3beef8",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "d32da8fb9c1445f78d622e6e7884ea44": {
+          "id": "d32da8fb9c1445f78d622e6e7884ea44",
+          "stepType": "Prompt",
+          "name": "Due date",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "When would you like this corrected? "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "5e14fabb79094231a0e25cd3b9a9ed23"
+        },
+        "60987caf21bf4c10b2e70f5e5e7aef39": {
+          "id": "60987caf21bf4c10b2e70f5e5e7aef39",
+          "stepType": "CrudAction",
+          "name": "Create issue",
+          "template": "opened_by={{vaInputs.user}}^category={{vaInputs.category}}^due_date={{vaInputs.due_date}}^location={{vaInputs.location}}^short_description={{vaInputs.short_description}}^assigned_to={{vaInputs.assign_to}}^u_inspector_1={{vaInputs.assign_to}}^state=low",
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "7173424282534eddba53e42fe43fd24a"
+        },
+        "8cabdc7cc26f494ab3c975fb4392bbaa": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "Assign to",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "To who you want to assign the issue?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "f2254d4efaef445abb9020097afe7520",
+          "id": "8cabdc7cc26f494ab3c975fb4392bbaa",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No records found? "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "active=true^nameISNOTEMPTY"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "e9f99ce30b3a4a27886d43e45dd2e27a": {
+          "id": "e9f99ce30b3a4a27886d43e45dd2e27a",
+          "stepType": "RecordOutput",
+          "name": "Record created",
+          "variableId": "7173424282534eddba53e42fe43fd24a",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "x_816876_safety_issue",
+          "fields": [
+            "number",
+            "category",
+            "priority",
+            "state",
+            "assigned_to"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "214d3bedfbae4d74b27c989107a09480": {
+          "stepType": "ChoicePrompt",
+          "name": "Priority",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please set the priority of the issue"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "74eb173e197f41efa5ab98dd31eeaa27",
+          "id": "214d3bedfbae4d74b27c989107a09480",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        }
+      },
+      "edges": [
+        {
+          "id": "1ee1e176f59b413f8d408ec79e8326ae",
+          "edgeType": "Edge",
+          "source": "ff5f945d41e64258bc77f7cef5be1381",
+          "target": "bce8ac8c0bfc43b6aada498f693c401a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e462c8be223d4756ac6008cec6fa296f",
+          "edgeType": "Edge",
+          "source": "bce8ac8c0bfc43b6aada498f693c401a",
+          "target": "fb57636b43bd4f7ab5a1628a7f7d9e6e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ad68368dee2d41f0a8e8e262a6362492",
+          "edgeType": "Branch",
+          "source": "c1214f7999d8414284c31af1ad3beef8",
+          "target": "d32da8fb9c1445f78d622e6e7884ea44",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.category=big",
+            "mode": "query"
+          },
+          "label": "Category:Big"
+        },
+        {
+          "id": "51463bc1cf934abf9fdeb804324fef8e",
+          "edgeType": "Branch",
+          "source": "c1214f7999d8414284c31af1ad3beef8",
+          "target": "60987caf21bf4c10b2e70f5e5e7aef39",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.category=small",
+            "mode": "query"
+          },
+          "label": "Category:Small"
+        },
+        {
+          "id": "ea4f40327a0b41f5853f1ee4e6552ec9",
+          "edgeType": "Edge",
+          "source": "d32da8fb9c1445f78d622e6e7884ea44",
+          "target": "60987caf21bf4c10b2e70f5e5e7aef39",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "805d79e18029437dae967db9e5390c0c",
+          "edgeType": "Edge",
+          "source": "e349b123eccc44c481bf4b28623302e1",
+          "target": "8cabdc7cc26f494ab3c975fb4392bbaa",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ff31d94310c940b0964adf2125032ee3",
+          "edgeType": "Edge",
+          "source": "8cabdc7cc26f494ab3c975fb4392bbaa",
+          "target": "c1214f7999d8414284c31af1ad3beef8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ca3bf02f2591443489dd2d1e91c44a91",
+          "edgeType": "Edge",
+          "source": "60987caf21bf4c10b2e70f5e5e7aef39",
+          "target": "e9f99ce30b3a4a27886d43e45dd2e27a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "42618f1eee5a424f9f2589f992557388",
+          "edgeType": "Edge",
+          "source": "e9f99ce30b3a4a27886d43e45dd2e27a",
+          "target": "7a4583e488c247258fdf7299f90432d4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "22f1550ab17a40f2973905c2c93cfbbb",
+          "edgeType": "Edge",
+          "source": "fb57636b43bd4f7ab5a1628a7f7d9e6e",
+          "target": "214d3bedfbae4d74b27c989107a09480",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "837073c5f7ac4246af6b549192c11169",
+          "edgeType": "Edge",
+          "source": "214d3bedfbae4d74b27c989107a09480",
+          "target": "e349b123eccc44c481bf4b28623302e1",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "4eaf52d3f8734d09ade55a84ec3c0aeb": {
+      "id": "4eaf52d3f8734d09ade55a84ec3c0aeb",
+      "name": "short_description",
+      "label": "Short Description",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY1MjE4MzQ3MjE5OSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "c204175c288446e3b720c7bebf2baaa7": {
+      "id": "c204175c288446e3b720c7bebf2baaa7",
+      "name": "category",
+      "label": "Category",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Big",
+          "value": "big"
+        },
+        {
+          "label": "Small",
+          "value": "small",
+          "checked": true
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "27b388aedef94d6088f3be14dd20b740": {
+      "id": "27b388aedef94d6088f3be14dd20b740",
+      "name": "location",
+      "label": "Location",
+      "varType": "reference",
+      "table": "cmn_location",
+      "category": "vaInputs"
+    },
+    "5e14fabb79094231a0e25cd3b9a9ed23": {
+      "id": "5e14fabb79094231a0e25cd3b9a9ed23",
+      "name": "due_date",
+      "label": "Due Date",
+      "varType": "date_time",
+      "secure": false,
+      "category": "vaInputs",
+      "mode": "date"
+    },
+    "7173424282534eddba53e42fe43fd24a": {
+      "id": "7173424282534eddba53e42fe43fd24a",
+      "name": "create_issue",
+      "label": "Create Issue",
+      "varType": "reference",
+      "table": "x_816876_safety_issue",
+      "inactive": false,
+      "category": "vaInputs"
+    },
+    "f2254d4efaef445abb9020097afe7520": {
+      "id": "f2254d4efaef445abb9020097afe7520",
+      "name": "assign_to",
+      "label": "Assign To",
+      "varType": "reference",
+      "table": "sys_user",
+      "category": "vaInputs"
+    },
+    "74eb173e197f41efa5ab98dd31eeaa27": {
+      "id": "74eb173e197f41efa5ab98dd31eeaa27",
+      "name": "priority",
+      "label": "Priority",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Low",
+          "value": "low"
+        },
+        {
+          "label": "Moderate",
+          "value": "moderate",
+          "checked": true
+        },
+        {
+          "label": "Critical",
+          "value": "critical",
+          "checked": true
+        }
+      ],
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <key_phrases>Create issue,safety issue,safety</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Create issue</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 11:47:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>402b3e3607534110f758f6fd7c1ed005</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Create issue</sys_name>
+        <sys_package display_value="Safety" source="x_816876_safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_scope>
+        <sys_update_name>sys_cb_topic_402b3e3607534110f758f6fd7c1ed005</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 12:17:23</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=402b3e3607534110f758f6fd7c1ed005"/>
+</record_update>

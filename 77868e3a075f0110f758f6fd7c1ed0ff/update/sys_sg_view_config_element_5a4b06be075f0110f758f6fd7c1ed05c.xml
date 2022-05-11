@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config_element">
+    <sys_sg_view_config_element action="INSERT_OR_UPDATE">
+        <name>priority-FieldValue</name>
+        <sys_class_name>sys_sg_view_config_element</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 08:18:58</sys_created_on>
+        <sys_id>5a4b06be075f0110f758f6fd7c1ed05c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>priority-FieldValue</sys_name>
+        <sys_package display_value="Safety" source="x_816876_safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_scope>
+        <sys_update_name>sys_sg_view_config_element_5a4b06be075f0110f758f6fd7c1ed05c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 08:18:58</sys_updated_on>
+        <view_config display_value="Issue Detail Screen View Config">9e4b06be075f0110f758f6fd7c1ed055</view_config>
+        <view_template_slot display_value="text_03">ef5ef07841e35010f877183fc9b8be34</view_template_slot>
+    </sys_sg_view_config_element>
+</record_update>

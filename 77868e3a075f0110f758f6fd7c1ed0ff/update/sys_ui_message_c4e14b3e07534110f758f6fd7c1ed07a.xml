@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>when would you like this corrected?</key>
+        <language>en</language>
+        <message>When would you like this corrected?</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 12:17:29</sys_created_on>
+        <sys_id>c4e14b3e07534110f758f6fd7c1ed07a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>when would you like this corrected?</sys_name>
+        <sys_package display_value="Safety" source="x_816876_safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_scope>
+        <sys_update_name>sys_ui_message_c4e14b3e07534110f758f6fd7c1ed07a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 12:17:29</sys_updated_on>
+    </sys_ui_message>
+</record_update>
