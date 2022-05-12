@@ -31,7 +31,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "Thank you for reporting a safety  ssue, "
+                    "text": "Thank you for reporting a safety  issue, "
                   },
                   {
                     "type": "datapill",
@@ -678,14 +678,14 @@
         <sys_created_on>2022-05-10 11:47:59</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>402b3e3607534110f758f6fd7c1ed005</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Create issue</sys_name>
         <sys_package display_value="Safety" source="x_816876_safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_package>
         <sys_policy/>
         <sys_scope display_value="Safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_scope>
         <sys_update_name>sys_cb_topic_402b3e3607534110f758f6fd7c1ed005</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-10 12:17:23</sys_updated_on>
+        <sys_updated_on>2022-05-12 07:34:15</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>
         <variables/>
