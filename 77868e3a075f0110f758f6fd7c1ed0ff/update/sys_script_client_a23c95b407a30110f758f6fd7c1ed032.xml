@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>This script assigns the current user to the field open by.</description>
+        <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Assign current user</name>
+        <name>vsc_test</name>
         <order/>
         <script><![CDATA[function onLoad() {
-    if (g_form.isNewRecord()) {
-        g_form.setValue('opened_by', g_user.userID);
-    }
+    alert('Hello from VSC');
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-05-11 13:09:39</sys_created_on>
+        <sys_created_on>2022-05-16 10:01:13</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>3384d05307578110f758f6fd7c1ed00f</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>Assign current user</sys_name>
+        <sys_id>a23c95b407a30110f758f6fd7c1ed032</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>vsc_test</sys_name>
         <sys_overrides/>
         <sys_package display_value="Safety" source="x_816876_safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_package>
         <sys_policy/>
         <sys_scope display_value="Safety">77868e3a075f0110f758f6fd7c1ed0ff</sys_scope>
-        <sys_update_name>sys_script_client_3384d05307578110f758f6fd7c1ed00f</sys_update_name>
+        <sys_update_name>sys_script_client_a23c95b407a30110f758f6fd7c1ed032</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-05-16 09:52:38</sys_updated_on>
-        <table>x_816876_safety_issue</table>
-        <type>onLoad</type>
-        <ui_type>10</ui_type>
+        <sys_updated_on>2022-05-16 10:02:03</sys_updated_on>
+        <table/>
+        <type/>
+        <ui_type>0</ui_type>
         <view/>
     </sys_script_client>
 </record_update>
